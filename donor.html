@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donor Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/15e0b9968f.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    /* styles.css */
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color:rgba(0,0,50,0.8);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-color: white; /* Light gray background */
+    color: white; /* Text color */
+    font-size: 16px;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.category-card {
+    background-color:#0056b3; /* White background */
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    height: 200px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.category-card:hover {
+    background-color: #f7f7f7; /* Light gray background on hover */
+}
+
+footer {
+    background-color:rgba(0,0,50,0.8);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer p {
+    margin: 0;
+}
+.cards-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+/* Media Query for small screens */
+@media screen and (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+}
+
+
+</style>
+<body>
+    
+    <header>
+        <h1>Donate Items</h1>
+        <i class="fa-solid fa-search"></i>
+        <input type="text" id="searchBar" placeholder="Search categories...">
+    </header>
+    <main class="cards-container">
+        <div class="category-card" onclick="selectCategory('Food')"><a href="food.html">
+            <h2>Food</h2></a>
+        </div>
+        <div class="category-card" onclick="selectCategory('Clothes')"><a href="clothes.html">
+            <h2>Clothes</h2></a>
+        </div>
+        <div class="category-card" onclick="selectCategory('Clothes')">
+            <h2>Clothes</h2>
+        </div>
+        <div class="category-card" onclick="selectCategory('Clothes')">
+            <h2>Clothes</h2>
+        </div>
+        <div class="category-card" onclick="selectCategory('Clothes')">
+            <h2>Clothes</h2>
+        </div>
+        <!-- Add more category cards here -->
+    </main>
+    <footer>
+        <p>Selected Category: <span id="selectedCategory">None</span></p>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        // script.js
+function selectCategory(category) {
+    document.getElementById("selectedCategory").textContent = category;
+}
+
+    </script>
+</body>
+</html>

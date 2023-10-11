@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    background-color:#005c99;
+    color: white;
+    width: 250px;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.sidebar h2 {
+    margin: 0 0 40px;
+    font-size: 24px;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-menu li {
+   
+    margin-top: 90px;
+}
+
+.sidebar-menu li a {
+    color: white;
+    text-decoration: none;
+    margin-top: 40px;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+header {
+    background-color: #005c99;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px 5px 0 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+.image-gallery img {
+    max-width: 20%;
+    height: auto;
+    margin: 7px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05);
+}
+
+.new-donation {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+.new-donation h2 {
+    margin: 0 0 20px;
+    font-size: 24px;
+}
+
+.new-donation button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.new-donation button:hover {
+    background-color: #0056b3;
+}
+
+.card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  
+}
+
+.card h2 {
+    margin: 0 0 10px;
+    font-size: 20px;
+}
+
+.card p {
+    color: #333;
+    margin: 0;
+}
+
+.delete-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+   
+    
+}
+
+</style>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <ul class="sidebar-menu">
+                <li><a href="#">Profile</a></li>
+                <li><a href="Pictures.html">Pictures</a></li>
+                <li><a href="#">Feedbacks</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <header>
+                <h1>Welcome to Donation Management</h1>
+            </header>
+            <main>
+                <div class="image-gallery">
+                    <img src="food.jpg" alt="Image 1">
+                    <img src="food2.png" alt="Image 2">
+                   
+                    <!-- Add more images here -->
+                </div>
+                <div class="new-donation">
+                    <h2>New Donation</h2>
+                    <button id="openForm" action="onclick"><a href="form.html">Open Form</button></a>
+                    <form id="donationForm" style="display: none;">
+                        <!-- Donation form fields go here -->
+                    </form>
+                </div>
+                <div class="card">
+                    <a href="info.html"><h2>Donation Information</h2></a>
+                    <p>Donation Information</p>
+                    <button class="delete-button">Delete</button>
+                </div>
+                <div class="card">
+                    <a href="Rating.html"><h2>Ratings and review</h2></a>
+                    <p>Content for Card 2</p>
+                    <button class="delete-button">Delete</button>
+                </div>
+                <div class="card">
+                    <a href="feedback.html"> <h2>Feedbacks</h2></a>
+                    <p>Content for Card 2</p>
+                    <button class="delete-button">Delete</button>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

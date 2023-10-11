@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+   
+</head>
+<style>
+    /* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(rgba(0,0,50,0.8),rgba(0,0,50,0.8)),url(bg.jpg);
+    margin: 0;
+    padding: 0;
+    
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: lightblue;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab {
+    flex-grow: 1;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background-color: #f4f4f4;
+    border-radius: 5px 5px 0 0;
+}
+
+.tab:hover {
+    background-color: #e1e1e1;
+}
+
+.form {
+    display: none;
+}
+
+.form h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+form {
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+</style>
+<body>
+    <div class="container">
+        <div class="tabs">
+            <div class="tab" id="donor-tab">Donor</div>
+            <div class="tab" id="recipient-tab">Recipient</div>
+        </div>
+        <div class="form" id="donor-form">
+            <h2>Donor Registration</h2>
+            <form action="/donor.html">
+                <!-- Donor registration fields go here -->
+                <label for="donor-name">Name:</label>
+                <input type="text" id="donor-name" required>
+                <label for="donor-email">Email:</label>
+                <input type="email" id="donor-email" required>
+                <label for="donor-password">Password:</label>
+                <input type="password" id="donor-password" required>
+                <a href="donor.html"><button type="submit">Register as Donor</button></a>
+            </form>
+        </div>
+        <div class="form" id="recipient-form">
+            <h2>Recipient Registration</h2>
+            <form>
+                <!-- Recipient registration fields go here -->
+                <label for="recipient-name">Name:</label>
+                <input type="text" id="recipient-name" required>
+                <label for="recipient-email">Email:</label>
+                <input type="email" id="recipient-email" required>
+                <label for="recipient-password">Password:</label>
+                <input type="password" id="recipient-password" required>
+                <button type="submit">Register as Recipient</button>
+            </form>
+        </div>
+    </div>
+    <script src="scriptn.js"></script>
+</body>
+</html>
